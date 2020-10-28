@@ -1,27 +1,13 @@
 # MyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+Step to reproduce 
 
-## Development server
+1. Click on Init to initilize pubnub 
+2. Click Join A, check console log to see that precence is logged - should be something like `incoming presence - xxx`  
+3. Click Join B, check console log to see that precence is logged - should be something like `incoming presence - xxx` 
+4. Click Leave B, Check console log, Sometime Join A is triggered and sometime Leave A action is triggered 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The expected outcome would be 
+1. The presenece event is only triggerd for that specific channel when unsubscribe occurs 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Thanks
